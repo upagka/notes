@@ -16,10 +16,10 @@ public class HardcodedNotesRepository implements NotesRepository {
         tags.add(3);
 
         notes.add(new Note(1, "Купи хлеб", "свежий бородинский", tags, 2, "25/01/2021 12.000"));
-        notes.add(new Note(1, "Купи хлеб", "свежий бородинский", tags, 2, "25/01/2021 12.000"));
-        notes.add(new Note(1, "Купи хлеб", "свежий бородинский", tags, 2, "25/01/2021 12.000"));
-        notes.add(new Note(1, "Купи хлеб", "свежий бородинский", tags, 2, "25/01/2021 12.000"));
-        notes.add(new Note(1, "Купи хлеб", "свежий бородинский", tags, 2, "25/01/2021 12.000"));
+        notes.add(new Note(1, "Посмотри фильм", "Прибытие", tags, 3, "20/01/2021 12.000"));
+        notes.add(new Note(1, "Позвони дяде", "", tags, 2, "25/01/2021 12.000"));
+        notes.add(new Note(1, "прочитай про корутины", "внимательно", tags, 5, "25/01/2021 12.000"));
+        notes.add(new Note(1, "Сделай домашнюю работу", "Фрагменты ДЗ№6", tags, 4, "25/01/2021 12.000"));
 
         return null;
     }

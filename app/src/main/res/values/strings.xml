@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Notes</string>
+    <string name="sample1_title">купи хлеба</string>
+    <string name="sample1_text">бородинский, в магнуме</string>
 </resources>
