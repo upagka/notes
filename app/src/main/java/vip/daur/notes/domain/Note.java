@@ -12,6 +12,15 @@ public class Note implements Parcelable {
 
     private String title;
 
+    public Note(int id, String title, String text, Set<Integer> tags, int priority, String date) {
+        this.id = id;
+        this.title = title;
+        this.text = text;
+        this.tags = tags;
+        this.priority = priority;
+        this.date = date;
+    }
+
     private String text;
 
     private Set<Integer> tags;
