@@ -21,7 +21,7 @@ public class HardcodedNotesRepository implements NotesRepository {
         notes.add(new Note(1, "прочитай про корутины", "внимательно", tags, 5, "25/01/2021 12.000"));
         notes.add(new Note(1, "Сделай домашнюю работу", "Фрагменты ДЗ№6", tags, 4, "25/01/2021 12.000"));
 
-        return null;
+        return notes;
     }
 
     @Override

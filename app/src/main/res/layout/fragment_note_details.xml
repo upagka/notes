@@ -6,20 +6,20 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/city_tile"
+        android:id="@+id/note_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_margin="@dimen/default_margin"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2"
-        tools:text="@string/sample1_title" />
+        android:text="@string/sample1_title" />
 
     <TextView
-        android:id="@+id/city_image"
+        android:id="@+id/note_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="@dimen/default_margin"
-        tools:text="@string/sample1_text" />
+        android:text="@string/sample1_text" />
 
 </LinearLayout>
