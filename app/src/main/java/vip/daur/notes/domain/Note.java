@@ -20,6 +20,31 @@ public class Note implements Parcelable {
 
     private String date;
 
+    public int getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public Set<Integer> getTags() {
+        return tags;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+
     protected Note(Parcel in) {
         id = in.readInt();
         title = in.readString();
