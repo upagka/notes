@@ -30,8 +30,21 @@ public class MainActivity extends AppCompatActivity {
             selectedNote = savedInstanceState.getParcelable(ARG_NOTE);
 
             if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.notes_container, new NotesListFragment())
+                        .addToBackStack(null)
+                        .commit();
                 showDetails();
             }
+        } else {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.notes_container, new NotesListFragment())
+                    .addToBackStack(null)
+                    .commit();
+
         }
 
         getSupportFragmentManager()
@@ -46,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
                             getSupportFragmentManager()
                                     .beginTransaction()
-                                    .add(R.id.notes_container_vertical, new NoteDetailsFragment())
+                                    .replace(R.id.notes_container, new NoteDetailsFragment())
                                     .commit();
 
 //                            Intent intent = new Intent(MainActivity.this, NoteDetailsActivity.class);
