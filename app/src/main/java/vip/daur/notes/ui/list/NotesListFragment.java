@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -43,7 +44,7 @@ public class NotesListFragment extends Fragment implements NotesListView {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        notesContainer = view.findViewById(R.id.notes_container);
+        notesContainer = view.findViewById(R.id.notes_container_fragment);
 
         presenter.refresh();
     }
@@ -63,6 +64,8 @@ public class NotesListFragment extends Fragment implements NotesListView {
                     data.putParcelable(ARG_NOTE, note);
                     getParentFragmentManager()
                             .setFragmentResult(RESULT_KEY, data);
+
+                    Toast.makeText(getActivity(), note.getTitle(), Toast.LENGTH_SHORT).show();
 
                 }
             });

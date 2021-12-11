@@ -31,6 +31,8 @@ public class NoteDetailsFragment extends Fragment {
         return fragment;
     }
 
+
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -48,7 +50,6 @@ public class NoteDetailsFragment extends Fragment {
                     @Override
                     public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
                         Note note = result.getParcelable(NotesListFragment.ARG_NOTE);
-
                         displayDetails(note);
                     }
                 });
