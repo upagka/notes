@@ -8,9 +8,7 @@ import java.util.Set;
 
 public class Note implements Parcelable {
 
-    private int id;
 
-    private String title;
 
     public Note(int id, String title, String text, Set<Integer> tags, int priority, String date) {
         this.id = id;
@@ -20,6 +18,10 @@ public class Note implements Parcelable {
         this.priority = priority;
         this.date = date;
     }
+
+    private int id;
+
+    private String title;
 
     private String text;
 

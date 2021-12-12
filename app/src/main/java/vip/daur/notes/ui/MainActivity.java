@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentResultListener;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import vip.daur.notes.R;
 import vip.daur.notes.domain.Note;
@@ -23,11 +24,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (savedInstanceState != null && savedInstanceState.containsKey("key")) {
+            Toast.makeText(this, "YOOOOOO", Toast.LENGTH_SHORT).show();
+        }
 
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.notes_container, new NotesListFragment())
-                .addToBackStack("main")
+                .replace(R.id.details_container, new NoteDetailsFragment())
                 .commit();
 
         if (savedInstanceState != null && savedInstanceState.containsKey(ARG_NOTE)) {
@@ -51,11 +55,9 @@ public class MainActivity extends AppCompatActivity {
                             getSupportFragmentManager()
                                     .beginTransaction()
                                     .replace(R.id.notes_container, new NoteDetailsFragment().newInstance(selectedNote))
+                                    .addToBackStack("details")
                                     .commit();
 
-//                            Intent intent = new Intent(MainActivity.this, NoteDetailsActivity.class);
-//                            intent.putExtra(NoteDetailsActivity.EXTRA_NOTE, selectedNote);
-//                            startActivity(intent);
                         }
                     }
                 });
