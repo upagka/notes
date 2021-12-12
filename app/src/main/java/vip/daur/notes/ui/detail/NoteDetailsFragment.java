@@ -44,7 +44,7 @@ public class NoteDetailsFragment extends Fragment {
 
         noteTitle = view.findViewById(R.id.note_title);
         noteText = view.findViewById(R.id.note_text);
-        //noteTags = view.findViewById(R.id.note_tags);
+        noteTags = view.findViewById(R.id.note_tags);
 
 
         if (getArguments() != null && getArguments().containsKey(ARG_NOTE)) {

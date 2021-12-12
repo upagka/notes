@@ -20,6 +20,8 @@ import vip.daur.notes.domain.Note;
 
 public class NotesListFragment extends Fragment implements NotesListView {
 
+
+    public static final String TAG = "NOTES_TAG";
     public static final String ARG_NOTE = "ARG_NOTE";
     public static final String RESULT_KEY = "NotesListFragment_RESULT";
 
