@@ -2,4 +2,5 @@
 <resources>
     <dimen name="default_margin">16dp</dimen>
     <dimen name="small_margin">8dp</dimen>
+    <dimen name="save_button_text_size">24sp</dimen>
 </resources>

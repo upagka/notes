@@ -2,7 +2,10 @@ package vip.daur.notes.ui.detail;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,8 +19,10 @@ import vip.daur.notes.ui.list.NotesListFragment;
 public class NoteDetailsFragment extends Fragment {
     public static final String ARG_NOTE = "ARG_NOTE";
     public static final String KEY_RESULT = "NoteDetailsFragment_KEY_RESULT";
-    private TextView noteTitle;
-    private TextView noteText;
+    private EditText noteTitle;
+    private EditText noteText;
+    private TextView noteTime;
+    private EditText noteTags;
 
     public NoteDetailsFragment() {
         super(R.layout.fragment_note_details);
@@ -38,8 +43,9 @@ public class NoteDetailsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         noteTitle = view.findViewById(R.id.note_title);
-
         noteText = view.findViewById(R.id.note_text);
+        noteTags = view.findViewById(R.id.note_tags);
+
 
         if (getArguments() != null && getArguments().containsKey(ARG_NOTE)) {
             displayDetails(getArguments().getParcelable(ARG_NOTE));
